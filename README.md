@@ -1,8 +1,8 @@
 # Sprint 2 – Build a Product Page API
 
-Do you remember your old product page assignment with pharmacuticals? Today's assignment is to build an API that feeds the page the products and implement that it fetches data from your API instead of the blob of json. This will also be your first full stack application – meaning you will have build both the frontend and backend, YAY! 
+Do you remember your old product page assignment with pharmaceuticals? Today's assignment is to build an API which feeds the page the products. So the page fetches data from your API, instead of the blob of JSON as it did before. This will also be your first full stack application – meaning you will have built both the frontend and backend, YAY! (You will use the old frontend, though, so you don't have to rebuild it)
 
-You will create a API that fetches all products from a database and returns the following response: (The same as the json file you had before)
+You will create a API which fetches all products from a database and returns a response which looks like the example below:
 
 ```
 {
@@ -28,45 +28,43 @@ You will create a API that fetches all products from a database and returns the 
 			"image": "https://www.apoteket.se/produktbilder/Validoo/088534s.jpg",
 			"description": "Lindrar smärta, dämpar inflammation och sänker feber. Effekten kommer inom 30 min, varar i ca 6 tim. Från 12 år."
 		}
-    
 	]
 }
 ```
-When you are finished with your assignment your frontend application should fetch the data from the API and display the products. 
 
+This is the same format which the JSON blob had.
+
+When you are finished with your assignment your frontend application should fetch the data from the API and display the products.
 
 ## How to complete this assignment
 
-The tools to use is for this assignment is: 
-* :white_check_mark: React – Frontend
-* Node.js – For the API
-* MongoDB – To store product data. 
+For this assignment, you'll use the React frontend from the old product page assignment and update it to fetch data from an api written in Express, with a MongoDB database.
 
-### Getting started with MongoDB
+First, concentrate on building the API. For that, we've started you off with an express server setup in the code folder of this repository. To make life a little easier, it already has mongo configured, too. You will need to have mongo installed and running, though.
 
-### A Node API
+Once the API is done, you can load up your old products page project, and update it to fetch data from the API.
 
-~~ OLD TEXT ~~
+### Starting the API
 
-### Iterate over the data
+In code/server.js, you'll find a setup similar to the one we created during the lecture. Start by installing dependencies with `npm install`, then run the project with `npm start`.
 
-Use the old `product.json` from the previous assignment to populate the database. 
+### The product model
 
-You should iterate over the data you fetch from your API and render at least one component for each product to build up the page from reusable components. Every product listing should have the following data rendered:
+Update the Product model in code/server.js to include all the attributes which the product will need (the keys which the old JSON had). You can then create products by sending POST requests using postman to the /products endpoint (an endpoint which was defined for you in server.js).
 
-* `name`
-* `price`
-* `type`
-* `size`
-* `numberInPack`
-* `deliveryTime`
-* `image`
-* `substance`
+### New endpoint
+
+Add a new endpoint to the api on GET /products. In here, you'll need to use `.find()` on the `Product` model to retrieve all objects from the database. Then return them in the response.
+
+### Updating the old project
+
+Now it's just to open up the old project and use `fetch` to fetch data from the API!
 
 ### :books: Reading List
 
-* [List and Keys in React](https://reactjs.org/docs/lists-and-keys.html)
-* [React Components](https://reactjs.org/docs/react-component.html)
+* [Mongoose Docs](http://mongoosejs.com/docs/index.html)
+* [Using promises in Mongoose](http://erikaybar.name/using-es6-promises-with-mongoosejs-queries/)
+* [Express](https://expressjs.com/)
 
 ---
 
@@ -82,7 +80,7 @@ Learning how to think as a web developer is learning how to be an expert in prob
 
 ### :boom: Success!
 
-After completing this assignment you should know how to build your first real API with a Mongo Database. You will also have build your first full stack application and gain lots more understanding of the backend side of apps. 
+After completing this assignment you should know how to build your first real API with a MongoDB database, using Mongoose to model data. You will also have build your first full stack application and gain lots more understanding of the backend side of apps.
 
 ---
 
@@ -90,6 +88,5 @@ After completing this assignment you should know how to build your first real AP
 
 Done with the main task? Here's some ideas for things to continue with:
 
-Error Handling! 
-1. What happens if the database is empty? 
-1. What happens if the server is not responding? 
+1. Create a form to create products with. It should handle the POST requests to the API.
+1. Add error handling to the React project so it shows an error message when the API isn't running.
