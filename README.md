@@ -50,11 +50,9 @@ The tools to use is for this assignment is:
 
 ### Iterate over the data
 
-In the `code/src/product.json` file there's an array of products in JSON format –– basically just normal JavaScript objects. This is the data you will be using to fill your product listing. The starter code is set up to require this file and makes it available through the `productsJson` variable.
+Use the old `product.json` from the previous assignment to populate the database. 
 
-When the project is running, if you navigate to http://localhost:3000/ in the browser and look in the console, you'll see the products list printed out. It is being loaded from the JSON file we mentioned before.
-
-Your task is to iterate over this array and render at least one component for each product to build up the page from reusable components. Every product listing should have the following data rendered:
+You should iterate over the data you fetch from your API and render at least one component for each product to build up the page from reusable components. Every product listing should have the following data rendered:
 
 * `name`
 * `price`
@@ -64,10 +62,6 @@ Your task is to iterate over this array and render at least one component for ea
 * `deliveryTime`
 * `image`
 * `substance`
-
-Don't panic, there is more data in the file but let's leave that for the stretch goals.
-
-When you are finished you should have a listing that looks like the sketch above.
 
 ### :books: Reading List
 
@@ -88,7 +82,7 @@ Learning how to think as a web developer is learning how to be an expert in prob
 
 ### :boom: Success!
 
-After completing this assignment you should be comfortable working with reusable components in React. You should also be comfortable using your JavaScript skills to iterate over an array of data, select the parts you want, and create a dynamic webpage based on that.
+After completing this assignment you should know how to build your first real API with a Mongo Database. You will also have build your first full stack application and gain lots more understanding of the backend side of apps. 
 
 ---
 
@@ -96,6 +90,6 @@ After completing this assignment you should be comfortable working with reusable
 
 Done with the main task? Here's some ideas for things to continue with:
 
-1. Add more information about the product on hover, use the `description` parameter for this. [Here's an example](https://www.apoteket.se/kategori/erbjudanden/) of what we're thinking.
-1. Make your page responsive and work for mobile and tablets. Use a 2-column layout on tablet and single column for mobile.
-1. Add a header to the listing that tells how many products you are showing. `xxx products`.
+Error Handling! 
+1. What happens if the database is empty? 
+1. What happens if the server is not responding? 
