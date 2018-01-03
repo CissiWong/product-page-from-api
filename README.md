@@ -38,17 +38,15 @@ When you are finished with your assignment your frontend application should fetc
 ## How to complete this assignment
 
 The tools to use is for this assignment is: 
-* React (Already done)
-* Node.js – To build the API
-* MongoDB – To store all data on the server. 
+* :white_check_mark: React – Frontend
+* Node.js – For the API
+* MongoDB – To store product data. 
 
-### Project setup
+### Getting started with MongoDB
 
-In the "code" folder in this assignment you'll find a copy of the Technigo React starter project which you can use as a base to complete this assignment! In the terminal, "cd" into that folder and install dependencies by running `npm install`. Once that's done, you can start the project by running `npm start`.
+### A Node API
 
-### React Components
-
-Start by thinking of how to divide your page into React components. For example, you might want to build a `Page` component which is responsible for reading the JSON, and a `Product` component which the `Page` could render for each product. Try to draw out your plan on paper to get it clear in your mind.
+~~ OLD TEXT ~~
 
 ### Iterate over the data
 
