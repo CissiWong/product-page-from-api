@@ -46,7 +46,7 @@ Once the API is done, you can load up your old products page project, and update
 
 ### Starting the API
 
-In code/server.js, you'll find a setup similar to the one we created during the lecture. Start by installing dependencies with `npm install`, then run the project with `npm start`.
+In code/server.js, you'll find a setup similar to the one we created during the lecture. *Start by reading through code/server.js to familiarize yourself with the setup we've given you.* Now you can install dependencies with `npm install`, then run the project with `npm start`.
 
 ### The product model
 
