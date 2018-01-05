@@ -1,4 +1,4 @@
-# Sprint 2 – Build a Product Page API
+# Sprint 5 – Build a Product Page API
 
 Do you remember your old product page assignment with pharmaceuticals? Today's assignment is to build an API which feeds the page the products. So the page fetches data from your API, instead of the blob of JSON as it did before. This will also be your first full stack application – meaning you will have built both the frontend and backend, YAY! (You will use the old frontend, though, so you don't have to rebuild it)
 
