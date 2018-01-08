@@ -1,11 +1,15 @@
 import mongoose from "mongoose"
 import express from "express"
 import bodyParser from "body-parser"
+import cors from "cors"
 
 // Express setup, including JSON body parsing.
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+// Tells express to add the "Access-Control-Allow-Origin" header to allow requests from anywhere.
+app.use(cors())
 
 // Connect to MongoDB, on the "products-api" database. If the db doesn't exist, mongo will create it.
 mongoose.connect("mongodb://localhost/products-api", { useMongoClient: true })
