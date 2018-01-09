@@ -51,5 +51,11 @@ app.post("/products", (req, res) => {
 })
 
 // Add more endpoints here!
+app.get("/all-products", (req, res) => {
+  Product.find().then((allProducts) => {
+    res.json(allProducts)
+  })
+})
+
 
 app.listen(8080, () => console.log("Products API listening on port 8080!"))
