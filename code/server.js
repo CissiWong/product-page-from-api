@@ -24,6 +24,15 @@ mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 // This is the beginning of a model for the Product object.
 const Product = mongoose.model("Product", {
   name: String,
+  id: Number,
+  type: String,
+  size: String,
+  numberInPack: String,
+  substance: String,
+  price: Number,
+  deliveryTime: String,
+  image: String,
+  description: String
   // Add more attributes to your product here.
 })
 
